@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAR Image Colorizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v=1.0">
+</head>
+<body>
+    <div class="container">
+        <h1>SAR Image Colorizer</h1>
+        <p>Upload a grayscale image to colorize it using our advanced neural network model.</p>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="imageFile" name="image" accept="image/*" required>
+            <button type="submit">Upload and Colorize</button>
+        </form>
+        <div id="result">
+            <h2>Original Image</h2>
+            <img id="originalImage" src="" alt="Original Image" style="display:none;">
+            <h2>Colorized Image</h2>
+            <img id="colorizedImage" src="" alt="Colorized Image" style="display:none;">
+        </div>
+    </div>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let formData = new FormData();
+            formData.append('image', document.getElementById('imageFile').files[0]);
+
+            fetch('/colorize', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert('Error: ' + data.error);
+                    return;
+                }
+
+                let originalImage = document.getElementById('originalImage');
+                let colorizedImage = document.getElementById('colorizedImage');
+
+                // Set the source URLs
+                originalImage.src = data.original_url;
+                colorizedImage.src = data.colorized_url;
+
+                // Display the images
+                originalImage.style.display = 'block';
+                colorizedImage.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>
