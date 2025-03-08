@@ -1,6 +1,6 @@
 # 🌈 SAR Image Colorizer
 
-![SAR Image Colorizer](file:///C:/Users/taiti/OneDrive/Desktop/sar%20img%203%20phase.jpg)
+![SAR Image Colorizer](https://github.com/Taitilchheda/SAR-colorizer/blob/main/sar%20img%203%20phase.jpg)
 
 This project is aimed at developing a **Generative Adversarial Network (GAN)** based system for colorizing **grayscale Synthetic Aperture Radar (SAR) images**. The model utilizes deep learning techniques such as **U-Net** for the generator and **PatchGAN** for the discriminator to produce high-quality, realistic colorized SAR images. 🖼️
 
@@ -15,6 +15,17 @@ SAR image colorization is important in improving the interpretability of radar i
 - Implements **Batch Normalization** and **Instance Normalization** for stable and efficient training. 📈
 - Supports real-time training and evaluation with high-quality visualizations of generated color images. 👨‍💻
 - Built using **TensorFlow** and **Keras** for deep learning. 🔥
+
+## 💻 Easy User Interface
+The project also provides a user-friendly interface that simplifies the process of colorizing grayscale SAR images. With just a few clicks, users can easily upload their grayscale images, and the model will generate the colorized output in real-time.
+![SAR Image Colorizer UI](https://github.com/Taitilchheda/SAR-colorizer/blob/main/UI%20for%20SAR.jpg).
+
+Key features of the UI:
+
+- Drag-and-drop support for uploading images. 🖱️
+- Preview mode to check the results before downloading the colorized images. 🔍
+- Batch processing to colorize multiple images at once. ⚙️
+- Intuitive navigation and simple controls to start and stop the process. 🚀
 
 ## 🛠️ Usage
 
@@ -48,7 +59,7 @@ Here’s an example of how the model colorizes grayscale SAR images:
 
 | Input Grayscale Image | Generated Color Image |
 |-----------------------|-----------------------|
-| ![Input Image](path_to_input_image) | ![Generated Image](path_to_generated_image) |
+| ![Input Image](https://github.com/Taitilchheda/SAR-colorizer/blob/main/grey%20image.png) | ![Generated Image](https://github.com/Taitilchheda/SAR-colorizer/blob/main/colored%20image.png) |
 
 ## 🤝 Acknowledgements
 
