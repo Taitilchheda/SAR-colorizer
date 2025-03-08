@@ -1,6 +1,6 @@
 # 🌈 SAR Image Colorizer
 
-![SAR Image Colorizer](https://www.example.com/path-to-image.jpg)
+![SAR Image Colorizer](file:///C:/Users/taiti/OneDrive/Desktop/sar%20img%203%20phase.jpg)
 
 This project is aimed at developing a **Generative Adversarial Network (GAN)** based system for colorizing **grayscale Synthetic Aperture Radar (SAR) images**. The model utilizes deep learning techniques such as **U-Net** for the generator and **PatchGAN** for the discriminator to produce high-quality, realistic colorized SAR images. 🖼️
 
