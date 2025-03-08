@@ -1,35 +1,67 @@
-# SAR Image Colorizer - GAN-based Colorization of SAR Images
+# 🌈 SAR Image Colorizer
 
-## Overview
+![SAR Image Colorizer](https://www.example.com/path-to-image.jpg)
 
-The **SAR Image Colorizer** is an advanced machine learning project that utilizes **Generative Adversarial Networks (GANs)** to colorize **Synthetic Aperture Radar (SAR)** images. This deep learning model transforms grayscale SAR images into high-quality colorized versions, making it a powerful tool for enhancing satellite and aerial imagery.
+This project is aimed at developing a **Generative Adversarial Network (GAN)** based system for colorizing **grayscale Synthetic Aperture Radar (SAR) images**. The model utilizes deep learning techniques such as **U-Net** for the generator and **PatchGAN** for the discriminator to produce high-quality, realistic colorized SAR images. 🖼️
 
-The project leverages state-of-the-art techniques, including a **U-Net generator**, **PatchGAN discriminator**, and a **multi-scale approach** to produce visually realistic and detailed results. It’s designed to work with large-scale SAR datasets and can be deployed to generate color images from grayscale inputs with minimal artifacts.
+## 📜 Overview
 
-## Key Features
+SAR image colorization is important in improving the interpretability of radar images, which are typically monochromatic and lack detailed features. This project uses a GAN-based approach to convert grayscale SAR images into colorized images, enabling better visualization and analysis of radar data. 🎨
 
-- **GAN-based Architecture**: Uses a **U-Net** generator and **PatchGAN** discriminator to generate high-quality colorized SAR images.
-- **Multi-scale Approach**: The model employs a multi-scale discriminator (with PatchGAN at different scales) to improve the image's realism and prevent overfitting.
-- **Loss Functions**: Combines **adversarial loss** with **L1 loss** to ensure both perceptual quality and pixel-wise accuracy.
-- **Normalization Layers**: Batch and Instance Normalization layers to stabilize training and enhance generalization across different SAR image data.
-- **Efficient Data Pipeline**: Utilizes TensorFlow’s `tf.data.Dataset` API for handling large-scale SAR datasets efficiently, including image resizing, normalization, and augmentation.
+## 🔧 Features
 
-## Technologies Used
+- **Generative Adversarial Network (GAN)** based colorization using **U-Net** (generator) and **PatchGAN** (discriminator). 🤖
+- Combines **adversarial loss** and **L1 loss** for enhanced image quality and accuracy. 🏆
+- Implements **Batch Normalization** and **Instance Normalization** for stable and efficient training. 📈
+- Supports real-time training and evaluation with high-quality visualizations of generated color images. 👨‍💻
+- Built using **TensorFlow** and **Keras** for deep learning. 🔥
 
-- **TensorFlow** & **Keras**: The framework used for developing and training the deep learning models.
-- **Generative Adversarial Networks (GANs)**: The core technique used for generating colorized images from grayscale SAR data.
-- **U-Net**: Custom deep learning architecture used as the generator to convert grayscale SAR images to color.
-- **PatchGAN**: A discriminator model that performs local image discrimination for better quality.
-- **Adam Optimizer**: Optimizer used for training the models with learning rate tuning.
-- **Batch Normalization & Instance Normalization**: Techniques used to stabilize and speed up training.
-- **OpenCV**: Used for preprocessing and image manipulation, such as resizing and color conversion.
-- **Matplotlib**: For data visualization and displaying results.
-
-## Installation
-
-To run the SAR Image Colorizer, you'll need the following dependencies:
+## 🛠️ Usage
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/sar-image-colorizer.git
    cd sar-image-colorizer
+
+2. Install required libraries:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3. Prepare your SAR dataset with grayscale and color images. The folder structure should be:
+    ```bash
+    /path/to/dataset/
+        ├── gray_images/
+        └── color_images/
+    ```
+4. Train the model:
+    ```bash
+    python train.py
+    ```
+5. To evaluate the model and generate colorized images:
+    ```bash
+    python evaluate.py --input_path /path/to/test_images/ --output_path /path/to/save_colorized_images/
+    ```
+
+## 💡 Example
+
+Here’s an example of how the model colorizes grayscale SAR images:
+
+| Input Grayscale Image | Generated Color Image |
+|-----------------------|-----------------------|
+| ![Input Image](path_to_input_image) | ![Generated Image](path_to_generated_image) |
+
+## 🤝 Acknowledgements
+
+This project is inspired by U-Net and GAN architectures commonly used for image-to-image tasks like segmentation and colorization.
+
+Special thanks to the TensorFlow and Keras teams for providing excellent deep learning libraries.
+
+The dataset used for training the model comes from Sentinel-1&2 Image Pairs (SAR & Optical) Kaggle.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📬 Contact
+
+For any questions or suggestions, feel free to open an issue or contact me at taitilchheda@gmail.com.
