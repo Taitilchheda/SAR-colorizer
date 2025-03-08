@@ -59,7 +59,7 @@ Here’s an example of how the model colorizes grayscale SAR images:
 
 | Input Grayscale Image | Generated Color Image |
 |-----------------------|-----------------------|
-| ![Input Image](https://github.com/Taitilchheda/SAR-colorizer/blob/main/grey%20image.png) | ![Generated Image](https://github.com/Taitilchheda/SAR-colorizer/blob/main/colored%20image.png) |
+| ![Input Image](https://github.com/Taitilchheda/SAR-colorizer/blob/main/grey%20image.png) | ![Generated Image]() |
 
 ## 🤝 Acknowledgements
 
