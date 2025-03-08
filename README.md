@@ -18,6 +18,7 @@ SAR image colorization is important in improving the interpretability of radar i
 
 ## 💻 Easy User Interface
 The project also provides a user-friendly interface that simplifies the process of colorizing grayscale SAR images. With just a few clicks, users can easily upload their grayscale images, and the model will generate the colorized output in real-time.
+
 ![SAR Image Colorizer UI](https://github.com/Taitilchheda/SAR-colorizer/blob/main/UI%20for%20SAR.jpg).
 
 Key features of the UI:
