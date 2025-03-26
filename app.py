@@ -98,7 +98,7 @@ def load_model():
     if model is None:
         model = mod_Unet()
         # Update this path to a relative or environment variable path
-        model_path = os.environ.get('MODEL_PATH', 'model/gen0.h5')
+        model_path = os.environ.get('MODEL_PATH', 'E:\SAR Colorizer\SAR-Colorizer\gen0.h5')
         model.load_weights(model_path)
         print("Model loaded successfully")
 

@@ -90,6 +90,6 @@ def save_colorized_image(grayscale_image, colorized_image, output_path):
 
 def colorize_and_save(input_path, output_path):
     model = mod_Unet()
-    model.load_weights("D:\dj sanghvi\sem 3\SIH 2024\colorizer\gen0.h5")
+    model.load_weights("E:\SAR Colorizer\SAR-Colorizer\gen0.h5")
     grayscale_image, colorized_image = colorize_image(model, input_path)
     save_colorized_image(grayscale_image, colorized_image, output_path)
